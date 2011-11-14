@@ -57,9 +57,10 @@ class Parser:
 		pass
 
 	def JSON_decode(self, data):
-		elements = {}
+		encoded_data = []
 		try:
-			elements = simplejson.loads(data)
+			for line in data:
+				encoded_data.append(simplejson.loads(line))
 		except:
 			print "[ERR] Couldn't parse JSON"
 			print "[+++] Data=%s" % data
