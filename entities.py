@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, os
+import sys, os, simplejson
 
 # Entity manager
 class Manager:
@@ -28,9 +28,15 @@ class Entity_Living(Entity):
 	def __init__(self):
 		self.name = None
 
+	def move(self, direction, velocity):
+		pass
+
+	def attack(self, entity_living):
+		pass	# Check inCamera, range, strength, weapon, armor, health
+
 # Creature object
 class Entity_Creature(Entity_Living):
-	def __init__(self):
+	def __init__(self, name):
 		pass
 
 # NPC object
