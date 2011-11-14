@@ -1,0 +1,42 @@
+{"id"=0,"texture"=0,"name"="Void","blockable"=1}
+{"id"=1,"texture"=1,"name"="Grass"}
+{"id"=2,"texture"=2,"name"="Wooden sword","description"="A wooden sword","equipable"=3,"strength"=5}
+
+
+
+
+#####
+### MAP
+#####
+
+
+# Layers
+0 = Ground
+1 = Obstacles 1
+2 = Living entities
+3 = Overlay
+
+
+
+#####
+### OBJECTS
+#####
+
+
+
+# Obligatory variables
+id				= Item ID.
+texture			= Texture ID, used for the spritesheet.
+name			= Name of the item.
+
+# Additional variables
+description		= Description of the item.
+blockable		= If a creature can walk on it (0 = Yes (default), 1 = No).
+equipable		= If player can pick it up (0 = No (default), 1 = Backpack, 2-8 = Equipment).
+health			= Changes the player's health.
+mana			= Changes the player's mana.
+strength		= Changes the player's strength.
+agility			= Changes the player's agility.
+dexterity		= Changes the player's dexterity.
+vitality		= Changes the player's vitality.
+intelligense	= Changes the player's intelligense.
