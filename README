@@ -1,0 +1,13 @@
+DESCRIPTION
+===========
+
+A RPG (rollplaying game) made in Python with PyGame.
+
+REQUIREMENTS
+============
+
+Python 2.6.X
+PyGame 1.9.X
+Numpy (a python module)
+
+http://pygame.org/install.html
