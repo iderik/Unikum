@@ -1,0 +1,2 @@
+{"name":"Cat","sprite":0,"health"=9,"walking":2}
+{"name":"Orc","sprite":0,"health"=50,"walking":2,"agressive":1,"strength":5}
