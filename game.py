@@ -22,7 +22,7 @@ class Game:
 
 	# Load content
 	def load(self):
-		self.sprites.load('sprites.bmp')
+		self.sprites.load('media/sprites.bmp')
 		self.world.load(['data/world/layer0'])
 		self.font = pygame.font.Font('freesansbold.ttf', 32)
 
