@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-import sys, os
+import os
+from layer import TileLayer
 from numpy import *
 
 class Manager:
@@ -13,4 +14,4 @@ class Manager:
 				stream = open(filepath, 'r')
 				layer = [map(int, line.split(',')) for line in stream.readlines()]
 				stream.close()
-				self.layers.append(array(layer))
+				self.layers.append(TileLayer(array(layer), (32, 32)))

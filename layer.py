@@ -4,18 +4,20 @@ class Layer:
 
 class TileLayer(Layer):
 
-	def __init__(self, tiles, size):
+	def __init__(self, tiles, tilesize):
 		self.tiles = tiles
-		self.size = size
+		self.tilesize = tilesize
+		self.size = (len(tiles[0]), len(tiles))
 
 	def is_inside(self, position):
-		return True
+		return position[0] >= 0 and position[0] < self.size[0] and \
+				position[1] >= 0 and position[1] < self.size[1]
 
 	def screen_to_layer(self, position):
-		return (int(position[0]/self.size[0]), int(position[1]/self.size[1]))
+		return (int(position[0]/self.tilesize[0]), int(position[1]/self.tilesize[1]))
 
 	def layer_to_screen(self, position):
-		return (position[0]*self.size[0], position[1]*self.size[1])
+		return (position[0]*self.tilesize[0], position[1]*self.tilesize[1])
 
 	def get_tile(self, position):
 		if not self.is_inside(position):

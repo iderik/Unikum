@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os, sys
-import pygame, world, sprites, entities, layer, render, view
+import pygame, world, sprites, entities, render, view
 from pygame.locals import *
 
 # Game manager
@@ -9,7 +9,6 @@ class Game:
 	def __init__(self, status=True):
 		self.status = status
 		self.mouse_pos = (0, 0)
-		self.layers = [layer.TileLayer([[]], (32, 32))]
 		self.view = view.View((640, 480))
 		pygame.init()
 		pygame.display.set_caption('Unikum 0.1')
@@ -49,13 +48,12 @@ class Game:
 
 	# Game loop
 	def update(self):
-		testsprite = pygame.transform.rotozoom(
-				self.sprites.list[0][359], 0.0, 2.0)
 		while self.status:
 			self.window.fill(pygame.Color(0, 0, 0))		# Black background
 			self.view.center_at((640-self.mouse_pos[0], 480-self.mouse_pos[1]))
-			for layer in self.layers:
-				render.render_tilelayer(self.window, layer, self.view, testsprite)
+
+			render.draw_world(self.window, self.world, self.view, self.sprites.list[0])
+
 			self.events()
 			pygame.display.update()						# Update display
 			self.clock.tick(30)							# 30 FPS
