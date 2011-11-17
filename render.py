@@ -18,11 +18,12 @@ def draw_tilelayer(surface, tilelayer, view, tileset):
 
 def draw_entitylayer(surface, entitylayer, view, spriteset):
 	for entity in entitylayer.entities:
-		offsetpos = view.transform((entity.rect[0], entity.rect[1]))
-		screenrect = (offsetpos[0], offsetpos[1], entity.rect[2], entity.rect[3])
-		surface.fill((0, 255, 0), screenrect)
+		draw_entity(surface, entity, view, spriteset)
+
+def draw_entity(surface, entity, view, spriteset):
+	offsetpos = view.transform(vector.sub(entity.position, vector.div(entity.size, 2)))
+	screenrect = (offsetpos[0], offsetpos[1], entity.size[0], entity.size[1])
+	surface.fill((255, 0, 0), screenrect)
 
 def draw_player(surface, player, view, spriteset):
-	offsetpos = view.transform((player.rect[0], player.rect[1]))
-	screenrect = (offsetpos[0], offsetpos[1], player.rect[2], player.rect[3])
-	surface.fill((255, 0, 0), screenrect)
+	draw_entity(surface, player, view, spriteset)

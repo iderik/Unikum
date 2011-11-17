@@ -31,10 +31,13 @@ class Manager:
 
 
 class Entity:
-	def __init__(self):
-		self.name = ""
-		self.sprite_id = 0
-		self.rect = (0, 0, 0, 0)
+	def __init__(self, name, position, size):
+		self.name = name
+		self.position = position
+		self.size = size
+
+	def rect():
+		return (position[0]-size[0]/2, position[1]-size[1]/2, size[0], size[1])
 
 	def move(self, direction, velocity):
 		pass
@@ -43,19 +46,18 @@ class Entity:
 		pass
 
 
-
 class Entity_Creature(Entity):
 	def __init__(self, name, sprite_id, position, size, interval):
 		self.name = name
 		self.sprite_id = sprite_id
-		self.rect = (position[0], position[1], size[0], size[1])
-
-
+		self.position = position
+		self.size = size
 
 # Player object
 class Entity_Player(Entity):
 	def __init__(self, name, sprite_id, position, size):
 		self.name = name
 		self.sprite_id = sprite_id
-		self.rect = (position[0], position[1], size[0], size[1])
+		self.position = position
+		self.size = size
 
