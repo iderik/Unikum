@@ -25,5 +25,9 @@ class TileLayer(Layer):
 		return self.tiles[position[1]][position[0]]
 
 class EntityLayer(Layer):
-	pass
+	def __init__(self, size):
+		self.size = size
+		self.entities = []
 
+	def add_entity(self, entity):
+		self.entities.append(entity)

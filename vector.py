@@ -16,3 +16,6 @@ def mul(vec, a):
 
 def div(vec, a):
 	return (vec[0]/a, vec[1]/a)
+
+def neg(vec):
+	return (-vec[0], -vec[1])

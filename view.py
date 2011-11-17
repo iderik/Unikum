@@ -12,5 +12,5 @@ class View:
 		self.offset = offset
 
 	def transform(self, position):
-		return vector.add(position, self.offset)
+		return vector.sub(position, self.offset)
 

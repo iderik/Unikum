@@ -14,12 +14,12 @@ class TestView(unittest.TestCase):
 	def test_transform_offset(self):
 		view = View((5, 7))
 		view.offset_at((2, 1))
-		self.assertEqual(view.transform((3, 2)), (5, 3))
+		self.assertEqual(view.transform((4, 2)), (2, 1))
 
 	def test_transform_center(self):
 		view = View((5.0, 7.0))
 		view.center_at((2.0, 1.0))
-		self.assertEqual(view.transform((3.0, 2.0)), (2.5, -0.5))
+		self.assertEqual(view.transform((3.0, 2.0)), (3.5, 4.5))
                                                           
 
 if __name__ == '__main__':

@@ -22,6 +22,9 @@ class TestVector(unittest.TestCase):
 	def test_div(self):
 		self.assertEquals(vector.div((3, 4), 2), (1, 2))
 		self.assertEquals(vector.div((3.1, 4.2), 2.0), (1.55, 2.1))
+	def test_neg(self):
+		self.assertEquals(vector.neg((3, 4)), (-3, -4))
+		self.assertEquals(vector.neg((3.1, 4.2)), (-3.1, -4.2))
 
 if __name__ == '__main__':
 	unittest.main()

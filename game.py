@@ -16,6 +16,7 @@ class Game:
 		self.window = pygame.display.set_mode((640, 480))
 		self.sprites = sprites.Manager()
 		self.world = world.Manager()
+		self.keys = []
 		self.load()
 		self.update()
 
@@ -43,14 +44,24 @@ class Game:
 			elif event.type == KEYDOWN:
 				if event.key == K_ESCAPE:
 					pygame.event.post(pygame.event.Event(QUIT))
+				self.keys.append(event.key)
 			elif event.type == KEYUP:
-				pass
-
+				self.keys.remove(event.key)
 	# Game loop
 	def update(self):
 		while self.status:
 			self.window.fill(pygame.Color(0, 0, 0))		# Black background
-			self.view.center_at((640-self.mouse_pos[0], 480-self.mouse_pos[1]))
+			self.view.center_at((self.world.player.rect[0], self.world.player.rect[1]))
+
+			# For testing
+			if K_a in self.keys:
+				self.world.player.rect = (self.world.player.rect[0]-10, self.world.player.rect[1], self.world.player.rect[2], self.world.player.rect[3])
+			if K_d in self.keys:
+				self.world.player.rect = (self.world.player.rect[0]+10, self.world.player.rect[1], self.world.player.rect[2], self.world.player.rect[3])
+			if K_w in self.keys:
+				self.world.player.rect = (self.world.player.rect[0], self.world.player.rect[1]-10, self.world.player.rect[2], self.world.player.rect[3])
+			if K_s in self.keys:
+				self.world.player.rect = (self.world.player.rect[0], self.world.player.rect[1]+10, self.world.player.rect[2], self.world.player.rect[3])
 
 			render.draw_world(self.window, self.world, self.view, self.sprites.list[0])
 
