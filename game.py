@@ -16,7 +16,7 @@ class Game:
 		self.window = pygame.display.set_mode((640, 480))
 		self.sprites = sprites.Manager()
 		self.world = world.Manager()
-		self.keys = []
+		self.keys = set()
 		self.load()
 		self.update()
 
@@ -44,9 +44,9 @@ class Game:
 			elif event.type == KEYDOWN:
 				if event.key == K_ESCAPE:
 					pygame.event.post(pygame.event.Event(QUIT))
-				self.keys.append(event.key)
+				self.keys.add(event.key)
 			elif event.type == KEYUP:
-				self.keys.remove(event.key)
+				self.keys.discard(event.key)
 	# Game loop
 	def update(self):
 		while self.status:
