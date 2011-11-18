@@ -13,7 +13,7 @@ class Manager:
 
 		# For testing
 		from entities import Entity_Player
-		self.player = Entity_Player("Player", 1, (200, 200), (32, 32))
+		self.player = Entity_Player("Player", 100, (200, 200), (32, 32))
 
 
 	def load(self, filepaths):

@@ -4,7 +4,7 @@ import sys, os, pygame
 
 # Sprite manager
 class Manager:
-	def __init__(self, sprite_width=16, sprite_height=16):
+	def __init__(self, sprite_width=32, sprite_height=32):
 		self.sprite_width = sprite_width
 		self.sprite_height = sprite_height
 		self.list = []

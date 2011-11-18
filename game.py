@@ -23,6 +23,7 @@ class Game:
 	# Load content
 	def load(self):
 		self.sprites.load('media/sprites.bmp')
+		self.sprites.load('media/terrain.png')
 		self.world.load(['data/world/layer0'])
 		self.font = pygame.font.Font('freesansbold.ttf', 32)
 
@@ -54,7 +55,7 @@ class Game:
 			self.view.center_at(self.world.player.position)
 
 			engine.update_world(self.world, self.keys, 1/30.0)
-			render.draw_world(self.window, self.world, self.view, self.sprites.list[0])
+			render.draw_world(self.window, self.world, self.view, self.sprites.list)
 
 			self.events()
 			pygame.display.update()						# Update display
