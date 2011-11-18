@@ -60,4 +60,9 @@ class Entity_Player(Entity):
 		self.sprite_id = sprite_id
 		self.position = position
 		self.size = size
+		self.velocity = (0, 0)
+
+		self.acceleration = 150.0
+		self.maxvelocity = 300.0
+		self.slowdown = 0.68
 

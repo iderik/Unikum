@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os, sys
-import pygame, world, sprites, entities, render, view, vector
+import pygame, world, sprites, entities, render, view, vector, engine
 from pygame.locals import *
 
 # Game manager
@@ -53,16 +53,7 @@ class Game:
 			self.window.fill(pygame.Color(0, 0, 0))		# Black background
 			self.view.center_at(self.world.player.position)
 
-			# For testing
-			if K_a in self.keys:
-				self.world.player.position = vector.add(self.world.player.position, (-10, 0))
-			if K_d in self.keys:
-				self.world.player.position = vector.add(self.world.player.position, (10, 0))
-			if K_w in self.keys:
-				self.world.player.position = vector.add(self.world.player.position, (0, -10))
-			if K_s in self.keys:
-				self.world.player.position = vector.add(self.world.player.position, (0, 10))
-
+			engine.update_world(self.world, self.keys, 1/30.0)
 			render.draw_world(self.window, self.world, self.view, self.sprites.list[0])
 
 			self.events()
