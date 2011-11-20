@@ -6,6 +6,7 @@ from pygame.locals import *
 
 def draw_world(surface, world, view, tilesets):
 	draw_tilelayer(surface, world.tilelayer, view, tilesets[1])
+	draw_tilelayer(surface, world.transitionlayer, view, tilesets[1])
 	draw_entitylayer(surface, world.entitylayer, view, tilesets[0])
 	draw_player(surface, world.player, view, tilesets[0])
 

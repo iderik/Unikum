@@ -24,6 +24,10 @@ class TileLayer(Layer):
 			return None
 		return self.tiles[position[1]][position[0]]
 
+	def set_tile(self, position, tile):
+		if self.is_inside(position):
+			self.tiles[position[1]][position[0]] = tile
+
 class EntityLayer(Layer):
 	def __init__(self, size):
 		self.size = size
