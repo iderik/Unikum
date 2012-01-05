@@ -11,8 +11,8 @@ class Hud:
 		self.sprites = {}
 		# Elements:
 		self.main_frame = Frame()
-		self.health_bar = Bar()
-		self.mana_bar = Bar()
+		self.health_bar = Bar((255, 0, 0))
+		self.mana_bar = Bar((0, 0, 255))
 
 	# Load spritesheet and configuration files.
 	def load_files(self, filepath_sheet, filepath_cfg):
@@ -96,11 +96,11 @@ class Frame():
 
 # Progressbar (example: player's health)
 class Bar(Base):
-	def __init__(self):
+	def __init__(self, progress_color):
 		super(Bar, self).__init__()
 		self.percentage = 0
 		self.progress_width = 0
-		self.progress_color = (255, 0, 0)
+		self.progress_color = progress_color
 
 	def update(self, value_now, value_max):
 		self.progress_width = int((float(self.rect[2]) / value_max) * value_now)
