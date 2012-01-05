@@ -6,16 +6,22 @@
 
 
 #####
-### MAP
+### ORDER OF RENDERING
 #####
 
 
-# Layers
-0 = Ground
-1 = Obstacles 1
-2 = Living entities
-3 = Overlay
 
+
+# Map layers
+0 = Ground				(Grass, dirt, water, etc)
+1 = Ground transition	(Grass to dirt, etc)
+2 = Obstacles			(Stones, walls, chairs, etc)
+5 = Overlay
+
+# Other layers
+3 = Living entities		(Players, creatures, etc)
+4 = Other entities		(Magic, projectiles, etc)
+6 = Texts				(Playername, creaturename, messages, etc)
 
 
 #####
@@ -63,3 +69,19 @@ vitality		= Changes the creatures's vitality
 intelligense	= Changes the creatures's intelligense
 dexterity		= Changes the creatures's dexterity
 spell			= 
+
+
+
+
+
+#####
+### USEFUL LINKS
+#####
+
+# General
+http://www.gamedev.net/forum/13-isometric-land/
+
+# Tile transition (for example: from grass over to dirt)
+http://www.gamedev.net/page/resources/_/technical/game-programming/tilemap-based-game-techniques-handling-terrai-r934
+http://www.gamedev.net/topic/606520-tile-transitions/
+http://spiralforums.biz/uploads/post-8584-1193026814.gif

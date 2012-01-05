@@ -53,7 +53,6 @@ class Entity_Creature(Entity):
 		self.position = position
 		self.size = size
 
-# Player object
 class Entity_Player(Entity):
 	def __init__(self, name, sprite_id, position, size):
 		self.name = name
@@ -65,4 +64,9 @@ class Entity_Player(Entity):
 		self.acceleration = 150.0
 		self.maxvelocity = 300.0
 		self.slowdown = 0.68
+
+		self.health = 300
+		self.mana = 50
+		self.health_max = 500
+		self.mana_max = 100
 

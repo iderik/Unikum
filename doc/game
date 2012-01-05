@@ -1,0 +1,122 @@
+
+#####
+### GENERAL
+#####
+
+Unikum is 
+
+
+
+
+
+#####
+### STATS
+#####
+
+You'll gain levels by gathering experience. Experience is recieved by killing creatures, killing players or by doing quests. After a sertain amount of levels you'll be able to change your character's class. Each level gained will reward you with 3 stat points and 1 skill point.
+
+Level			= Level is to show your experience in a human-readable way.
+Experience		= ?
+Stat points		= Stat points are used to customize your character as you wish, for example a warrior focused on strength and vitality.
+Skill points	= Skills points are used to customize your character's spells.
+
+Strength		= (+ Melee attack)
+Agility			= (+ Attack speed)
+Vitality		= (+ Melee defense) (+ Long-ranged defense) (+ Max health)
+Dexterity		= (+ Long-ranged attack)
+Intelligense	= (+ Magic attack) (+ Magic defense) (+ Max mana)
+
+
+
+#####
+### CLASSES
+#####
+
+LVL 1
+Novice
+
+LVL 5		LVL 40			LVL 80
+Warrior		-> Knight		-> Hero
+Archer		-> Hunter		-> Sniper
+Acolyte		-> Priest		-> Bishop
+Magician	-> Sorcerer		-> Wizard
+
+
+
+# Novice		[1]		- 
+Light heal      [5]		- 
+
+# Warrior		[5]		- 
+Bash            [5]		- 
+
+# Knight		[40]	- 
+Bash            [10]	- 
+Berserk         [5]		- Hit all enemies around you
+Parry           [5]		- Increase defend 50% and decrease attack 100% for 30 seconds.
+
+# Hero			[80]	- 
+Bash            [15]	- 
+Parry           [10]	- 
+Endure          []		- Increase Max HP with 20% for 1 minute.
+Adrenaline      []		- Increase attack speed with 10% for 1 minute.
+
+# Archer		[]		- 
+Double-strafe   [5]		- 
+
+# Hunter		[]		- 
+Double-strafe   [10]	- 
+Falcon eye      [5]		- 
+Trap            -
+
+# Ranger		[]		- 
+Double-strafe   [15]	- 
+Falcon eye      [10]	- 
+Arrow shower    []		- 
+Concentration   []		- 
+
+# Magician		[]		- 
+Fire bolt       [10]	- 
+Ice bolt        [10]	- 
+Magic shield    [5]		- 
+
+# Sorcerer
+Thunder bolt    [10] (Like SD on Tibia, a punch in stomach and push you back 2 tiles)
+Magic wall      [5]		- 
+
+# Wizard		[]		- 
+Light heal      [10]	- 
+Ice storm		[]		- 
+Firewind		[]		- 
+
+# Acolyte		[]		- 
+Heal            [5]		- 
+Str up          [5]		- 
+Agi up          [5]		- 
+Magic shield    [5]		- 
+
+# Priest		[]		- 
+Heal            [10]	- 
+Str up          [10]	- 
+Agi up          [10]	- 
+Magic wall      [5]		- 
+Meditation      [5]		- 
+
+# Biskop		[]		- 
+Heal            [15]	- 
+Mass heal       [5]		- 
+Fog             [5]		- 
+Meditation      [10]	- 
+
+
+
+#####
+### SKILLS
+#####
+
+
+
+
+
+
+
+
