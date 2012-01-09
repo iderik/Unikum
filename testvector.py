@@ -1,5 +1,6 @@
-import vector
+#!/usr/bin/env python
 
+import vector
 import unittest
 
 class TestVector(unittest.TestCase):
