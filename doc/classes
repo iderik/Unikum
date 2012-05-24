@@ -1,0 +1,36 @@
+
+
+# Level
+
+
+
+
+# Classes
+
+Choose a class at level 5. Each class has its own spells which can be chosen when advancing level.
+
+Knight		- Melee fighting, high defense, high health and low mana.
+Archer		- Ranged fighting, decent defense, decent health and decent mana.
+Sorcerer	- Ranged fighting, low defense, low health and high mana.
+Druid		- Ranged fighting, low defense, low health and high mana.
+
+
+
+# Stats
+
+On each level you gain 5 stat points which can then be used on any of the stats below. 
+The more you focus on a specific stat, the higher cost to focus even more in it. 
+For example; At level 1 Strength, it costs 3 points to advance in it. At level 5 strength, 
+it costs 4 points to advance in it. Max is level 99 on each stat.
+
+Strength	= Physically melee damage and able to carry more items.
+Agility		= Physically melee and ranged attack speed.
+Vitality	= Max health and physically defense.
+Intelligense	= Max mana, magically damage and defense.
+Dexterity	= Magically attack speed, physically ranged damage and hit chance.
+
+Even tho you're a knight you can focus on intelligense (recommended for mages).
+
+
+
+# Spells

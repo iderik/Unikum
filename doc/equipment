@@ -1,0 +1,60 @@
+
+The color of an equipment will be visible in-game as your outfit.
+
+
+
+# Sets of helmet, armor, legs and boots.
+
+NAME						COLOR
+Leather helmet, -armor, -legs and -boots	(Brown)
+Steel helmet, -armor, -legs and -boots		(Gray)
+Yeti helmet, -armor, -legs and -boots		(Blue)
+Dragon helmet, -armor, -legs and -boots		(Green)
+Golden helmet, -armor, -legs and -boots		(Yellow)
+Demon helmet, -armor, -legs and -boots		(Red)
+Diamond helmet, -armor, -legs and -boots	(Turquoise)
+
+
+
+# Weapons
+
+NAME			COLOR		HANDS
+Wooden sword		(Brown)		[1]
+Steel sword		(Gray)		[1]
+Two-handed sword	(Gray)		[2]
+Broadsword		(Blue)		[1]
+Longsword		(Blue)		[2]
+Giant sword
+
+Spear			(Brown)		[1]
+Wooden bow		(Brown)		[2]
+Primitive bow		(Gray)		[2]
+Longbow			(Blue)		[2]
+Crossbow		(Blue)		[2]
+Demon bow		(Red)		[2]
+Elvish bow		(Turqoiuse)	[2]
+
+Wooden wand		(Brown)		[1]
+Golden wand		(Yellow)	[1]
+Magic wand		(?)		[1]
+Demon wand		(Red)		[1]
+
+
+
+# Ammunition
+
+NAME			COLOR		WEAPON
+Spear			(Brown)		(Hands)
+Wooden arrow		(Brown)		(Bows)
+Wooden bolts		(Brown)		(Crossbows)
+Steel arrow		(Gray)		(Bows)
+Steel bolts		(Gray)		(Crossbows)
+Magic arrow		(Blue)		(Bows)
+Magic bolts		(Blue)		(Crossbows)
+
+
+
+# Runes
+
+NAME			COLOR		DESCRIPTION
+Bless rune

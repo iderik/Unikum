@@ -1,0 +1,32 @@
+# Ground
+{"item_id":0,"sprite_id":999,"name":"Void"}
+{"item_id":1,"sprite_id":0,"name":"Grass","walkable":1}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+# Transition
+
+# Overlay
+
+# Buildings
+# Furnitures
+# Equipments
+
+
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":,"sprite_id":,"name":""}
+{"item_id":995,"sprite_id":995,"name":"Chair","walkable":1,"moveable":2}
+{"item_id":996,"sprite_id":996,"name":"Chair","walkable":1,"moveable":2}
+{"item_id":997,"sprite_id":997,"name":"Chair","walkable":1,"moveable":2}
+{"item_id":998,"sprite_id":998,"name":"Chair","walkable":1,"moveable":2}
+
+{"item_id":,"sprite_id":,"name":""}
+
+

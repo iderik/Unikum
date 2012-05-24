@@ -1,0 +1,31 @@
+# Obligatory variables
+
+item_id			= ID of the item, do not mix this up with the in-game item_UID (Unique ID).
+sprite_id		= Sprite ID, used for the spritesheet.
+name			= Name of the item.
+
+# Additional variables
+
+description		= Description of the item.
+walkable		= Able to walk on the object (0 = False (default), 1 = True).
+velocity		= Change living entities' walking speed. Walkable must be True.
+moveable		= Can move the item (0 = False (default), # = Amount of throwing distance (tiles)).
+equipable		= If player can pick it up (0 = False (default), 1 = Backpack, 2-8 = Equipment).
+useable			= 
+health			= Changes the player's health. Equipable must be True.
+mana			= Changes the player's mana. Equipable must be True.
+strength		= Changes the player's strength. Equipable must be True.
+agility			= Changes the player's agility. Equipable must be True.
+dexterity		= Changes the player's dexterity. Equipable must be True.
+vitality		= Changes the player's vitality. Equipable must be True.
+intelligense		= Changes the player's intelligense. Equipable must be True.
+
+animation_id		= ?
+animation_axle		= ? To swing a sword, there has to be a fixed points where to rotate the sprite.
+animation_top		= ? The top/end position of the sprite.
+
+# Examples
+
+{"item_id":0,"sprite_id":0,"name":"Void"}
+{"item_id":1,"sprite_id":1,"name":"Water"}
+{"item_id":2,"sprite_id":2,"name":"Grass","walkable":1}

@@ -1,0 +1,23 @@
+# Obligatory variables
+name			=
+sprite			=
+health			=
+
+# Additional variables
+description		= 
+mana			= 
+walking			= Walking style (0 = Still (default), 1 = Randomly, 2 = Follow closely, 3 = Follow with distance, 4 = Escape from camera)
+velocity		= Walking speed (1.0 = default)
+agressive		= Attacking style (0 = When hit (default), 1 = On sight, 2 = When friends are hit)
+strength		= Changes the creatures's strength
+agility			= Changes the creatures's agility
+vitality		= Changes the creatures's vitality
+intelligense	= Changes the creatures's intelligense
+dexterity		= Changes the creatures's dexterity
+spell			= ?
+
+
+# Examples
+
+{"name":"Cat","sprite":0,"width":32,"height":32,"health"=9,"walking":2}
+{"name":"Orc","sprite":0,"width":32,"height":32,"health"=50,"walking":2,"agressive":1,"strength":5}

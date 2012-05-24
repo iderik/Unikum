@@ -1,0 +1,22 @@
+# Order of rendering
+
+layer_ground		(Void, grass, dirt, water, ...)
+layer_transition	(Grass on water, grass on dirt, ...)
+layer_obstacles		(Stones, trees, walls, ...)
+layer_overlay		(Tree tops, roofs, ...)
+entity_item[10]		(Equipments, chairs, doors, ...)
+entity_living		(Player, creatures, ...)
+entity_other		(Spell effects, projectiles, ...)
+entity_overlay		(Messages, playername, creaturename, healthbar, damage info, ...)
+gui_frame		(Mainframe around the camera, ...)
+gui_elements		(Textboxes, buttons, backpack, chat, healthbar, ...)
+gui_overlay		(...)
+
+
+
+
+# Brainstorming
+
+10 or more entity_item so you can have 10 items on top of each other on the ground?
+Doors on layer_obstacles or entity_items? Should not be moveable but still useable (to open and close it).
+Read more about surfaces! I remember something important about it, to increase performance a lot when using surfaces.
