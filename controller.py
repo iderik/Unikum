@@ -32,15 +32,25 @@ class Controller:
             elif event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
                     pygame.event.post(pygame.event.Event(QUIT))
+                elif event.key == K_w:
+                    pass
+                elif event.key == K_a:
+                    pass
+                elif event.key == K_s:
+                    pass
+                elif event.key == K_d:
+                    pass
             elif event.type == KEYUP:
                 pass
+    
+    
     
     # Main game loop
     # QUESTION: Update all and then draw all or keep current method?
     def loop(self):
         while self.model.looping:
             self.model.map.update()
-            self.view.map.draw_layer_ground()
+            self.view.map.draw(self.model.map.layer_ground)
             self.model.player.update()
             self.view.player.draw()
             self.model.hud.update()

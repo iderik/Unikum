@@ -1,4 +1,4 @@
-import os, sys, simplejson
+import os, sys, simplejson, vector
 import pygame
 from pygame.locals import *
 
@@ -10,7 +10,7 @@ class Model:
         self.map = Map()
         self.hud = Hud()
         self.sprites = Sprites((32, 32))
-        self.camera = Camera((100, 100, 15 * self.sprites.size[0], 11 * self.sprites.size[1]))
+        self.camera = Camera((40, 40), (15, 11))
         self.looping = True
         self.FPS = 30
         self.mouse_position = (0, 0)
@@ -32,13 +32,14 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.outfit = None
-        self.position = (None, None)
+        self.position = (40, 40)
         self.direction = None          # 1 = North, 2 = East, 3 = South, 4 = West
         self.velocity = None
         self.velocity_max = None
         self.health = None
         self.health_max = None
         
+    # FIXME: Not working yet
     def load(self, filepath):
         try:
             if os.path.exists(filepath):
@@ -73,7 +74,7 @@ class Map:
                 stream = open(dirpath + '/' + filename, 'r')
                 vars(self)[filename] = [map(int, line.split(',')) for line in stream.readlines()]
                 stream.close()
-                if filename == 'layer_ground':
+                if filename == 'layer_ground':  # Generate a transition layer from the ground layer.
                     self.layer_transition = self.layer_transition_generate(self.layer_ground)
         else:
             print 'ERROR map.load: Dirpath (%s) doesn\'t exist.' % dirpath
@@ -90,7 +91,7 @@ class Map:
 
 class Hud:
     def __init__(self):
-        self.sheet = None
+        pass
     
     def load(self, filepath):
         pass
@@ -102,9 +103,10 @@ class Hud:
 
 class Sprites:
     def __init__(self, size):
-        self.sprites = []
-        self.size = size    # Size of a sprite
+        self.sprites = []   # Container for all sprites.
+        self.size = size    # Size of a sprite (pixel as unit).
         
+    # Load and cut an image into pieces (self.size) and store them in a list (self.sprites).
     def load(self, filepath):
         if os.path.exists(filepath):
             sheet = pygame.image.load(filepath).convert_alpha()
@@ -116,14 +118,13 @@ class Sprites:
                     self.sprites.append(sheet.subsurface(rectangle))
         else:
             print 'ERROR sprites.load: File (%s) doesn\'t exist.' % filepath
-        
-        
 
 
 
 class Camera:
-    def __init__(self, rectangle):
-        self.rectangle = rectangle
+    def __init__(self, offset, size):
+        self.offset = offset    # An offset from top left corner (pixel as unit).
+        self.size = size        # Size of the camera area (tile as unit).
         
-    def move(self):
+    def update(self):
         pass

@@ -19,7 +19,7 @@ class Player:
         self.model = model
     
     def draw(self):
-        self.model.window.blit(self.model.sprites.sprites[1], (10, 10))
+        self.model.window.blit(self.model.sprites.sprites[1], (10, 10)) # For testing only!
 
 
 
@@ -27,29 +27,16 @@ class Map:
     def __init__(self, model):
         self.model = model
 
-    # FIXME: Using wrong arguments on vector.sub! 
-    def draw_layer_ground(self):
-        for y in range(self.model.map.size[1]):
-            for x in range(self.model.map.size[0]):
-                position = vector.sub((x * self.model.sprites.size[0],
-                                       y * self.model.sprites.size[1]),
-                                      (self.model.camera.rectangle[0],
-                                       self.model.camera.rectangle[1]))
-                sprite_id = self.model.map.layer_ground[x][y]
-                sprite_surface = self.model.sprites.sprites[sprite_id]
-                self.model.window.blit(sprite_surface, position)
-                                 
-                                 
+    # FIXME: There are still some definitions here which should be in model.
+    def draw(self, layer):
+        for y in range(11):
+            for x in range(15):
+                map_position = vector.sub((x, y), self.model.player.position)
+                sprite_id = layer[map_position[0]][map_position[1]]
+                sprite_image = self.model.sprites.sprites[sprite_id]
+                self.model.window.blit(sprite_image, vector.add((x * 32, y * 32), self.model.camera.offset))
 
-    def draw_layer_transition(self):
-        pass
-    
-    # At this moment you can only have 1 item on the ground.
-    def draw_layer_object(self):
-        pass
-    
-    def draw_layer_overlay(self):
-        pass
+
 
 class Hud:
     def __init__(self):
